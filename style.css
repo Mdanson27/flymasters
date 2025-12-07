@@ -1,0 +1,285 @@
+/* Flight Masters – Social Links Page
+   Brand: dark blue, gold, white
+*/
+
+:root {
+  --fm-navy: #05152f;
+  --fm-navy-deep: #020617;
+  --fm-gold: #d4af37;
+  --fm-gold-soft: #f4e1a3;
+  --fm-gold-dark: #b1891f;
+  --fm-white: #ffffff;
+  --fm-muted: #b0b9d2;
+  --fm-radius-card: 32px;
+  --fm-radius-btn: 14px;
+  --fm-shadow-card: 0 28px 55px rgba(0, 0, 0, 0.7);
+  --fm-shadow-btn: 0 16px 32px rgba(0, 0, 0, 0.55);
+  --fm-font: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fm-font);
+  min-height: 100vh;
+}
+
+/* ================= BACKGROUND ================= */
+
+.fm-bg {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(212, 175, 55, 0.32), transparent 55%),
+    radial-gradient(circle at 100% 100%, rgba(6, 26, 70, 0.9), transparent 55%),
+    linear-gradient(135deg, #020617, #02030b);
+}
+
+/* ================= MAIN CARD ================= */
+
+.fm-phone-card {
+  width: 100%;
+  max-width: 540px;                    /* wider so it fills more */
+  min-height: calc(100vh - 48px);      /* almost full-height */
+  background: linear-gradient(180deg, #071631, #020712);
+  border-radius: var(--fm-radius-card);
+  box-shadow: var(--fm-shadow-card);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  padding: 24px 22px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle gold / light overlay */
+.fm-phone-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% -10%, rgba(244, 225, 163, 0.3), transparent 55%),
+    radial-gradient(circle at 100% 110%, rgba(18, 31, 78, 0.95), transparent 55%);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+/* thin gold stripe at the bottom of the card */
+.fm-phone-card::after {
+  content: "";
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  bottom: 0;
+  height: 6px;
+  background: linear-gradient(90deg, transparent, var(--fm-gold), transparent);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* make inner content sit above overlays */
+.fm-phone-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ================= HEADER ================= */
+
+.fm-header {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.fm-avatar-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 0, #f7e2a8, #b1891f);
+  box-shadow: 0 12px 26px rgba(212, 175, 55, 0.8);
+  margin-bottom: 8px;
+}
+
+.fm-avatar {
+  width: 74px;
+  height: 74px;
+  border-radius: 999px;
+  border: 2px solid #fff;
+  object-fit: cover;
+}
+
+.fm-title {
+  margin: 4px 0 2px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fm-white);
+}
+
+.fm-subtitle {
+  margin: 0;
+  font-size: 0.84rem;
+  color: var(--fm-gold-soft);
+}
+
+.fm-caption {
+  margin: 8px auto 0;
+  font-size: 0.78rem;
+  color: var(--fm-muted);
+  max-width: 280px;
+}
+
+/* ================= LINK BUTTONS ================= */
+
+.fm-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.fm-link-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  text-decoration: none;
+  padding: 11px 13px;
+  border-radius: var(--fm-radius-btn);
+  box-shadow: var(--fm-shadow-btn);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  background: radial-gradient(circle at top left, rgba(212, 175, 55, 0.18), rgba(3, 9, 26, 0.98));
+  color: var(--fm-white);
+  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out,
+    border-color 0.15s ease-out, background 0.15s ease-out;
+}
+
+.fm-link-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
+  border-color: rgba(212, 175, 55, 0.9);
+  background: radial-gradient(circle at top, rgba(244, 225, 163, 0.34), rgba(3, 9, 26, 0.99));
+}
+
+/* Icon circle */
+
+.fm-icon {
+  flex: 0 0 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+/* Text */
+
+.fm-link-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.fm-link-label {
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.fm-link-sub {
+  font-size: 0.76rem;
+  color: var(--fm-muted);
+}
+
+/* Arrow */
+
+.fm-link-arrow {
+  flex: 0 0 auto;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Platform-specific icon backgrounds */
+
+.fm-whatsapp .fm-icon {
+  background: linear-gradient(135deg, #25d366, #128c7e);
+}
+
+.fm-instagram .fm-icon {
+  background: radial-gradient(circle at 30% 0, #fdf497, #fd5949, #d6249f, #285aeb);
+}
+
+.fm-twitter .fm-icon {
+  background: linear-gradient(135deg, #0f1419, #1d9bf0);
+}
+
+.fm-call .fm-icon {
+  background: linear-gradient(135deg, #1c9743, #0a4f22);
+}
+
+.fm-email .fm-icon {
+  background: linear-gradient(135deg, #d4af37, #b1891f);
+}
+
+.fm-location .fm-icon {
+  background: linear-gradient(135deg, #1f4e8a, #0b203d);
+}
+
+/* ================= FOOTER ================= */
+
+.fm-footer {
+  margin-top: 20px;
+  padding-top: 11px;
+  border-top: 1px solid rgba(212, 175, 55, 0.32);
+  text-align: center;
+}
+
+.fm-footer-title {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--fm-gold-soft);
+}
+
+.fm-footer-copy {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--fm-muted);
+  margin-top: 3px;
+}
+
+/* ================= RESPONSIVE (PHONES) ================= */
+
+@media (max-width: 640px) {
+  .fm-bg {
+    padding: 0; /* let card touch edges more on phones */
+  }
+
+  .fm-phone-card {
+    max-width: 100%;
+    min-height: 100vh;          /* full screen on phones */
+    border-radius: 0;           /* edge-to-edge look */
+    padding: 22px 16px 18px;
+  }
+
+  .fm-links {
+    gap: 11px;
+  }
+
+  .fm-link-btn {
+    padding-inline: 12px;
+  }
+}
