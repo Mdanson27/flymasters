@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flight Masters Uganda | Social Links</title>
+  <title>Flight Masters Uganda | Official Links</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <!-- Fonts (Investor-grade: Inter + Poppins fallback) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <!-- Font Awesome Icons -->
   <link
@@ -19,138 +21,179 @@
 
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <div class="fm-bg">
-    <div class="fm-phone-card">
+    <div class="fm-phone-card" role="application" aria-label="Flight Masters Uganda links">
 
-      <!-- Top logo + title -->
+      <!-- Top: Brand -->
       <header class="fm-header">
-        <div class="fm-avatar-wrap">
-          <img src="logo.jpg" alt="Flight Masters Uganda Logo" class="fm-avatar" />
+        <div class="fm-brand">
+          <div class="fm-avatar-wrap" aria-hidden="true">
+            <img src="logo.jpg" alt="Flight Masters Uganda Logo" class="fm-avatar" />
+          </div>
+
+          <div class="fm-brand-text">
+            <div class="fm-kicker">Official Contact Links</div>
+            <h1 class="fm-title">Flight Masters Uganda</h1>
+            <p class="fm-subtitle">Visas • Ticketing • Group Travel</p>
+
+            <a class="fm-site" href="https://flightmastersuganda.com" target="_blank" rel="noopener">
+              <i class="fa-solid fa-globe"></i>
+              <span>flightmastersuganda.com</span>
+              <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+          </div>
         </div>
-        <h1 class="fm-title">Flight Masters Uganda</h1>
-        <p class="fm-subtitle">Visas • Ticketing • Group Travel</p>
-        <p class="fm-caption">Follow us & contact us directly from the buttons below.</p>
+
+        <p class="fm-caption">
+          Follow us and contact us directly using the official buttons below.
+        </p>
       </header>
 
-      <!-- Buttons / bars -->
-      <main class="fm-links">
+      <!-- Links -->
+      <main class="fm-links" aria-label="Contact options">
 
-        <!-- WhatsApp (only number on WhatsApp: 0706 862 228) -->
         <a
           class="fm-link-btn fm-whatsapp"
           href="https://wa.me/256706862228"
           target="_blank"
           rel="noopener"
+          aria-label="Chat on WhatsApp: 0706 862 228"
         >
-          <div class="fm-icon">
+          <div class="fm-icon" aria-hidden="true">
             <i class="fa-brands fa-whatsapp"></i>
           </div>
           <div class="fm-link-text">
             <span class="fm-link-label">Chat on WhatsApp</span>
             <span class="fm-link-sub">0706 862 228 (Bookings & Support)</span>
           </div>
-          <span class="fm-link-arrow">
+          <span class="fm-link-arrow" aria-hidden="true">
             <i class="fa-solid fa-arrow-up-right-from-square"></i>
           </span>
         </a>
 
-        <!-- Instagram -->
         <a
           class="fm-link-btn fm-instagram"
           href="https://instagram.com/flightmastersuganda"
           target="_blank"
           rel="noopener"
+          aria-label="Follow on Instagram: @flightmastersuganda"
         >
-          <div class="fm-icon">
+          <div class="fm-icon" aria-hidden="true">
             <i class="fa-brands fa-instagram"></i>
           </div>
           <div class="fm-link-text">
-            <span class="fm-link-label">Follow us on Instagram</span>
+            <span class="fm-link-label">Follow on Instagram</span>
             <span class="fm-link-sub">@flightmastersuganda</span>
           </div>
-          <span class="fm-link-arrow">
+          <span class="fm-link-arrow" aria-hidden="true">
             <i class="fa-solid fa-arrow-up-right-from-square"></i>
           </span>
         </a>
 
-        <!-- X / Twitter -->
         <a
           class="fm-link-btn fm-twitter"
           href="https://x.com/flightmastersug"
           target="_blank"
           rel="noopener"
+          aria-label="Follow on X: @flightmastersug"
         >
-          <div class="fm-icon">
+          <div class="fm-icon" aria-hidden="true">
             <i class="fa-brands fa-x-twitter"></i>
           </div>
           <div class="fm-link-text">
-            <span class="fm-link-label">Follow us on X (Twitter)</span>
+            <span class="fm-link-label">Follow on X (Twitter)</span>
             <span class="fm-link-sub">@flightmastersug</span>
           </div>
-          <span class="fm-link-arrow">
+          <span class="fm-link-arrow" aria-hidden="true">
             <i class="fa-solid fa-arrow-up-right-from-square"></i>
           </span>
         </a>
 
-        <!-- Call (call-only number: 0780 586 991) -->
-        <a class="fm-link-btn fm-call" href="tel:+256780586991">
-          <div class="fm-icon">
+        <a
+          class="fm-link-btn fm-call"
+          href="tel:+256780586991"
+          aria-label="Call Flight Masters: 0780 586 991"
+        >
+          <div class="fm-icon" aria-hidden="true">
             <i class="fa-solid fa-phone"></i>
           </div>
           <div class="fm-link-text">
             <span class="fm-link-label">Call Flight Masters</span>
             <span class="fm-link-sub">0780 586 991</span>
           </div>
-          <span class="fm-link-arrow">
+          <span class="fm-link-arrow" aria-hidden="true">
             <i class="fa-solid fa-phone-volume"></i>
           </span>
         </a>
 
-        <!-- Email -->
-        <a class="fm-link-btn fm-email" href="mailto:flightmastersug@gmail.com">
-          <div class="fm-icon">
+        <a
+          class="fm-link-btn fm-email"
+          href="mailto:flightmastersug@gmail.com"
+          aria-label="Send an email to flightmastersug@gmail.com"
+        >
+          <div class="fm-icon" aria-hidden="true">
             <i class="fa-solid fa-envelope"></i>
           </div>
           <div class="fm-link-text">
             <span class="fm-link-label">Send us an Email</span>
             <span class="fm-link-sub">flightmastersug@gmail.com</span>
           </div>
-          <span class="fm-link-arrow">
+          <span class="fm-link-arrow" aria-hidden="true">
             <i class="fa-solid fa-arrow-up-right-from-square"></i>
           </span>
         </a>
 
-        <!-- Location / Maps search -->
+        <a
+          class="fm-link-btn fm-website"
+          href="https://flightmastersuganda.com"
+          target="_blank"
+          rel="noopener"
+          aria-label="Visit website: flightmastersuganda.com"
+        >
+          <div class="fm-icon" aria-hidden="true">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <div class="fm-link-text">
+            <span class="fm-link-label">Visit our Website</span>
+            <span class="fm-link-sub">flightmastersuganda.com</span>
+          </div>
+          <span class="fm-link-arrow" aria-hidden="true">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </span>
+        </a>
+
         <a
           class="fm-link-btn fm-location"
           href="https://www.google.com/maps/search/?api=1&query=Valley+Drive+Ntinda+Kampala"
           target="_blank"
           rel="noopener"
+          aria-label="Open location in Google Maps: Valley Drive, Ntinda, Kampala"
         >
-          <div class="fm-icon">
+          <div class="fm-icon" aria-hidden="true">
             <i class="fa-solid fa-location-dot"></i>
           </div>
           <div class="fm-link-text">
             <span class="fm-link-label">Visit Our Office</span>
             <span class="fm-link-sub">Valley Drive, Ntinda, Kampala</span>
           </div>
-          <span class="fm-link-arrow">
+          <span class="fm-link-arrow" aria-hidden="true">
             <i class="fa-solid fa-arrow-up-right-from-square"></i>
           </span>
         </a>
 
       </main>
 
-      <footer class="fm-footer">
+      <footer class="fm-footer" role="contentinfo">
         <span class="fm-footer-title">Your Journey, Perfectly Arranged.</span>
-        <span class="fm-footer-copy">© <span id="year"></span> Flight Masters Uganda</span>
+        <span class="fm-footer-copy">© <span id="year"></span> Flight Masters Uganda • All rights reserved</span>
       </footer>
+
     </div>
   </div>
 
   <script>
-    // dynamic year
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>

@@ -1,285 +1,444 @@
-/* Flight Masters – Social Links Page
-   Brand: dark blue, gold, white
-*/
+/* ==========================================================================
+   Flight Masters Uganda — Official Links (Investor-Grade)
+   Brand: Dark Blue • Gold • White
+   Notes:
+   - Designed for your updated HTML structure (fm-brand, fm-kicker, fm-site, fm-website)
+   - Premium glass + gold accents, crisp typography, smooth interactions
+   - Mobile-first edge-to-edge + safe tap targets
+   ========================================================================== */
 
-:root {
-  --fm-navy: #05152f;
-  --fm-navy-deep: #020617;
+:root{
+  /* Brand */
+  --fm-navy: #071631;          /* primary dark blue */
+  --fm-navy-2: #040b1a;        /* deeper */
+  --fm-ink: #eaf0ff;
+  --fm-muted: rgba(234,240,255,.74);
+
   --fm-gold: #d4af37;
-  --fm-gold-soft: #f4e1a3;
-  --fm-gold-dark: #b1891f;
-  --fm-white: #ffffff;
-  --fm-muted: #b0b9d2;
-  --fm-radius-card: 32px;
-  --fm-radius-btn: 14px;
-  --fm-shadow-card: 0 28px 55px rgba(0, 0, 0, 0.7);
-  --fm-shadow-btn: 0 16px 32px rgba(0, 0, 0, 0.55);
-  --fm-font: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --fm-gold-2: #f4e1a3;
+  --fm-gold-3: #b1891f;
+
+  /* Surfaces */
+  --fm-card: rgba(7, 22, 49, .78);
+  --fm-card-2: rgba(2, 6, 23, .78);
+  --fm-glass: rgba(255,255,255,.06);
+  --fm-line: rgba(212,175,55,.22);
+  --fm-line-2: rgba(234,240,255,.10);
+
+  /* Radius & shadow */
+  --fm-r-card: 34px;
+  --fm-r-btn: 16px;
+  --fm-r-pill: 999px;
+
+  --fm-shadow-card: 0 26px 70px rgba(0,0,0,.65);
+  --fm-shadow-btn: 0 18px 46px rgba(0,0,0,.52);
+
+  /* Typography */
+  --fm-font: "Inter", "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+  /* Layout */
+  --fm-max: 560px;
 }
 
+/* ---------------------------------
+   Reset
+---------------------------------- */
 *,
 *::before,
-*::after {
-  box-sizing: border-box;
+*::after{ box-sizing:border-box; }
+
+html, body{
+  margin:0;
+  padding:0;
+  height:100%;
 }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
-body {
+body{
   font-family: var(--fm-font);
-  min-height: 100vh;
+  color: var(--fm-ink);
+  background: var(--fm-navy-2);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* ================= BACKGROUND ================= */
+/* ---------------------------------
+   Background (Investor-grade)
+---------------------------------- */
+.fm-bg{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 18px;
 
-.fm-bg {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
   background:
-    radial-gradient(circle at 0% 0%, rgba(212, 175, 55, 0.32), transparent 55%),
-    radial-gradient(circle at 100% 100%, rgba(6, 26, 70, 0.9), transparent 55%),
-    linear-gradient(135deg, #020617, #02030b);
+    radial-gradient(900px 520px at 20% 0%, rgba(212,175,55,.20), transparent 60%),
+    radial-gradient(820px 460px at 92% 14%, rgba(12,74,110,.45), transparent 62%),
+    radial-gradient(820px 520px at 50% 115%, rgba(212,175,55,.10), transparent 60%),
+    linear-gradient(135deg, #020617 0%, #050913 45%, #02030b 100%);
 }
 
-/* ================= MAIN CARD ================= */
+/* ---------------------------------
+   Main Card
+---------------------------------- */
+.fm-phone-card{
+  width:100%;
+  max-width: var(--fm-max);
+  min-height: calc(100vh - 56px);
+  border-radius: var(--fm-r-card);
+  position:relative;
+  overflow:hidden;
 
-.fm-phone-card {
-  width: 100%;
-  max-width: 540px;                    /* wider so it fills more */
-  min-height: calc(100vh - 48px);      /* almost full-height */
-  background: linear-gradient(180deg, #071631, #020712);
-  border-radius: var(--fm-radius-card);
+  background:
+    linear-gradient(180deg, rgba(9, 27, 59, .94), rgba(2, 6, 23, .94));
+  border: 1px solid rgba(212,175,55,.30);
   box-shadow: var(--fm-shadow-card);
-  border: 1px solid rgba(212, 175, 55, 0.45);
-  padding: 24px 22px 20px;
-  position: relative;
-  overflow: hidden;
+  padding: 26px 22px 18px;
 }
 
-/* subtle gold / light overlay */
-.fm-phone-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
+/* Premium overlays */
+.fm-phone-card::before{
+  content:"";
+  position:absolute;
+  inset:-1px;
   background:
-    radial-gradient(circle at 50% -10%, rgba(244, 225, 163, 0.3), transparent 55%),
-    radial-gradient(circle at 100% 110%, rgba(18, 31, 78, 0.95), transparent 55%);
-  opacity: 0.9;
-  pointer-events: none;
+    radial-gradient(680px 220px at 50% -6%, rgba(244,225,163,.18), transparent 62%),
+    radial-gradient(760px 420px at 110% 110%, rgba(11,94,215,.10), transparent 60%),
+    radial-gradient(760px 420px at -10% 110%, rgba(212,175,55,.10), transparent 60%);
+  pointer-events:none;
 }
 
-/* thin gold stripe at the bottom of the card */
-.fm-phone-card::after {
-  content: "";
-  position: absolute;
-  left: 12%;
-  right: 12%;
-  bottom: 0;
-  height: 6px;
-  background: linear-gradient(90deg, transparent, var(--fm-gold), transparent);
-  opacity: 0.7;
-  pointer-events: none;
+.fm-phone-card::after{
+  content:"";
+  position:absolute;
+  left:12%;
+  right:12%;
+  bottom:0;
+  height: 7px;
+  background: linear-gradient(90deg, transparent, rgba(212,175,55,.95), transparent);
+  opacity:.75;
+  pointer-events:none;
 }
 
-/* make inner content sit above overlays */
-.fm-phone-card > * {
-  position: relative;
-  z-index: 1;
+.fm-phone-card > *{ position:relative; z-index:1; }
+
+/* ---------------------------------
+   Header
+---------------------------------- */
+.fm-header{
+  text-align:center;
+  margin-bottom: 18px;
 }
 
-/* ================= HEADER ================= */
-
-.fm-header {
-  text-align: center;
-  margin-bottom: 22px;
+.fm-brand{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap: 14px;
+  margin-bottom: 10px;
 }
 
-.fm-avatar-wrap {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
-  border-radius: 999px;
-  background: radial-gradient(circle at 30% 0, #f7e2a8, #b1891f);
-  box-shadow: 0 12px 26px rgba(212, 175, 55, 0.8);
+.fm-avatar-wrap{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 6px;
+  border-radius: var(--fm-r-pill);
+  background:
+    radial-gradient(circle at 30% 0%, rgba(244,225,163,1), rgba(177,137,31,1));
+  box-shadow:
+    0 14px 28px rgba(212,175,55,.35),
+    0 0 0 1px rgba(255,255,255,.08) inset;
+  flex:0 0 auto;
+}
+
+.fm-avatar{
+  width: 74px;
+  height: 74px;
+  border-radius: var(--fm-r-pill);
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,.92);
+  background: rgba(255,255,255,.9);
+}
+
+.fm-brand-text{
+  text-align:left;
+  min-width:0;
+}
+
+.fm-kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding: 7px 10px;
+  border-radius: var(--fm-r-pill);
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(212,175,55,.22);
+  color: rgba(244,225,163,.92);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
   margin-bottom: 8px;
 }
 
-.fm-avatar {
-  width: 74px;
-  height: 74px;
-  border-radius: 999px;
-  border: 2px solid #fff;
-  object-fit: cover;
-}
-
-.fm-title {
-  margin: 4px 0 2px;
-  font-size: 1.2rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+.fm-title{
+  margin: 0 0 4px;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: .10em;
   text-transform: uppercase;
-  color: var(--fm-white);
+  color: rgba(255,255,255,.96);
+  line-height: 1.15;
 }
 
-.fm-subtitle {
-  margin: 0;
-  font-size: 0.84rem;
-  color: var(--fm-gold-soft);
+.fm-subtitle{
+  margin: 0 0 10px;
+  color: rgba(244,225,163,.92);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
-.fm-caption {
-  margin: 8px auto 0;
-  font-size: 0.78rem;
+/* Website pill under header */
+.fm-site{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+  border: 1px solid rgba(212,175,55,.28);
+  color: rgba(234,240,255,.92);
+  font-weight: 900;
+  font-size: 13px;
+  letter-spacing: .02em;
+  box-shadow: 0 12px 28px rgba(0,0,0,.35);
+  transition: transform .16s ease, border-color .16s ease, background .16s ease;
+  max-width: 100%;
+}
+
+.fm-site i:first-child{
+  color: rgba(212,175,55,.95);
+  font-size: 14px;
+}
+
+.fm-site span{
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  max-width: 260px;
+}
+
+.fm-site i:last-child{
+  opacity:.75;
+}
+
+.fm-site:hover{
+  transform: translateY(-1px);
+  border-color: rgba(212,175,55,.70);
+  background:
+    linear-gradient(180deg, rgba(244,225,163,.14), rgba(255,255,255,.05));
+}
+
+.fm-caption{
+  margin: 12px auto 0;
+  max-width: 420px;
+  font-size: 12.5px;
+  line-height: 1.55;
   color: var(--fm-muted);
-  max-width: 280px;
+  font-weight: 650;
 }
 
-/* ================= LINK BUTTONS ================= */
-
-.fm-links {
-  display: flex;
-  flex-direction: column;
+/* ---------------------------------
+   Links list
+---------------------------------- */
+.fm-links{
+  display:flex;
+  flex-direction:column;
   gap: 12px;
   margin-top: 16px;
 }
 
-.fm-link-btn {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-  text-decoration: none;
-  padding: 11px 13px;
-  border-radius: var(--fm-radius-btn);
+/* Button base */
+.fm-link-btn{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  width:100%;
+  text-decoration:none;
+  padding: 13px 14px;
+  border-radius: var(--fm-r-btn);
+
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+  border: 1px solid rgba(212,175,55,.16);
   box-shadow: var(--fm-shadow-btn);
-  border: 1px solid rgba(212, 175, 55, 0.2);
-  background: radial-gradient(circle at top left, rgba(212, 175, 55, 0.18), rgba(3, 9, 26, 0.98));
-  color: var(--fm-white);
-  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out,
-    border-color 0.15s ease-out, background 0.15s ease-out;
+  color: rgba(255,255,255,.95);
+
+  transition:
+    transform .16s ease,
+    box-shadow .16s ease,
+    border-color .16s ease,
+    background .16s ease;
 }
 
-.fm-link-btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
-  border-color: rgba(212, 175, 55, 0.9);
-  background: radial-gradient(circle at top, rgba(244, 225, 163, 0.34), rgba(3, 9, 26, 0.99));
+.fm-link-btn:hover{
+  transform: translateY(-2px);
+  border-color: rgba(212,175,55,.70);
+  box-shadow: 0 24px 60px rgba(0,0,0,.62);
+  background:
+    linear-gradient(180deg, rgba(244,225,163,.12), rgba(255,255,255,.04));
 }
 
-/* Icon circle */
+.fm-link-btn:active{
+  transform: translateY(0px);
+}
 
-.fm-icon {
-  flex: 0 0 40px;
-  height: 40px;
-  border-radius: 999px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  color: #fff;
+/* Nice focus for accessibility */
+.fm-link-btn:focus-visible,
+.fm-site:focus-visible{
+  outline: 3px solid rgba(212,175,55,.55);
+  outline-offset: 3px;
+}
+
+/* Icon bubble */
+.fm-icon{
+  flex:0 0 44px;
+  height:44px;
+  border-radius: 14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size: 18px;
+  color:#fff;
+  box-shadow:
+    0 14px 26px rgba(0,0,0,.35),
+    0 0 0 1px rgba(255,255,255,.10) inset;
 }
 
 /* Text */
-
-.fm-link-text {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+.fm-link-text{
+  flex:1;
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  gap: 2px;
 }
 
-.fm-link-label {
-  font-size: 0.92rem;
-  font-weight: 500;
+.fm-link-label{
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: .01em;
+  color: rgba(255,255,255,.96);
+  line-height: 1.2;
 }
 
-.fm-link-sub {
-  font-size: 0.76rem;
-  color: var(--fm-muted);
+.fm-link-sub{
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(234,240,255,.72);
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
 }
 
 /* Arrow */
-
-.fm-link-arrow {
-  flex: 0 0 auto;
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.8);
+.fm-link-arrow{
+  flex:0 0 auto;
+  font-size: 14px;
+  color: rgba(234,240,255,.70);
+  padding-left: 4px;
 }
 
-/* Platform-specific icon backgrounds */
-
-.fm-whatsapp .fm-icon {
+/* ---------------------------------
+   Platform icon backgrounds (keep true colors)
+---------------------------------- */
+.fm-whatsapp .fm-icon{
   background: linear-gradient(135deg, #25d366, #128c7e);
 }
-
-.fm-instagram .fm-icon {
+.fm-instagram .fm-icon{
   background: radial-gradient(circle at 30% 0, #fdf497, #fd5949, #d6249f, #285aeb);
 }
-
-.fm-twitter .fm-icon {
+.fm-twitter .fm-icon{
   background: linear-gradient(135deg, #0f1419, #1d9bf0);
 }
-
-.fm-call .fm-icon {
+.fm-call .fm-icon{
   background: linear-gradient(135deg, #1c9743, #0a4f22);
 }
-
-.fm-email .fm-icon {
-  background: linear-gradient(135deg, #d4af37, #b1891f);
+.fm-email .fm-icon{
+  background: linear-gradient(135deg, var(--fm-gold), var(--fm-gold-3));
 }
-
-.fm-location .fm-icon {
+.fm-location .fm-icon{
   background: linear-gradient(135deg, #1f4e8a, #0b203d);
 }
-
-/* ================= FOOTER ================= */
-
-.fm-footer {
-  margin-top: 20px;
-  padding-top: 11px;
-  border-top: 1px solid rgba(212, 175, 55, 0.32);
-  text-align: center;
+.fm-website .fm-icon{
+  background: linear-gradient(135deg, rgba(212,175,55,.95), rgba(177,137,31,.95));
 }
 
-.fm-footer-title {
-  display: block;
-  font-size: 0.8rem;
-  color: var(--fm-gold-soft);
+/* ---------------------------------
+   Footer
+---------------------------------- */
+.fm-footer{
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(212,175,55,.24);
+  text-align:center;
 }
 
-.fm-footer-copy {
-  display: block;
-  font-size: 0.72rem;
-  color: var(--fm-muted);
-  margin-top: 3px;
+.fm-footer-title{
+  display:block;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba(244,225,163,.94);
 }
 
-/* ================= RESPONSIVE (PHONES) ================= */
+.fm-footer-copy{
+  display:block;
+  margin-top: 6px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: rgba(234,240,255,.62);
+}
 
-@media (max-width: 640px) {
-  .fm-bg {
-    padding: 0; /* let card touch edges more on phones */
-  }
-
-  .fm-phone-card {
+/* ---------------------------------
+   Responsive
+---------------------------------- */
+@media (max-width: 640px){
+  .fm-bg{ padding:0; }
+  .fm-phone-card{
     max-width: 100%;
-    min-height: 100vh;          /* full screen on phones */
-    border-radius: 0;           /* edge-to-edge look */
-    padding: 22px 16px 18px;
+    min-height: 100vh;
+    border-radius: 0;
+    padding: 22px 16px 16px;
   }
 
-  .fm-links {
-    gap: 11px;
+  .fm-brand{
+    gap: 12px;
+    justify-content:flex-start;
   }
 
-  .fm-link-btn {
-    padding-inline: 12px;
+  .fm-avatar{
+    width: 70px;
+    height: 70px;
   }
+
+  .fm-title{
+    font-size: 16px;
+  }
+
+  .fm-site span{
+    max-width: 210px;
+  }
+}
+
+/* Slightly tighter for very small phones */
+@media (max-width: 380px){
+  .fm-site span{ max-width: 175px; }
+  .fm-icon{ flex-basis: 42px; height: 42px; }
+  .fm-link-label{ font-size: 13.5px; }
 }
